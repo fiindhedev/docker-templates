@@ -7,7 +7,7 @@ import (
 )
 
 func indexHandler(c *fiber.Ctx) error {
-	return c.SendString("We are DevOps Hobbies :)")
+	return c.SendString("We are IZU Linux Midterm students running fiber:)")
 }
 
 func main() {

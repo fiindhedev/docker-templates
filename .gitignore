@@ -105,3 +105,17 @@ dist
 
 # Visual studio code settings and ...
 .vscode
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/DockerSample.AssemblyInfo.cs
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/DockerSample.AssemblyInfoInputs.cache
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/DockerSample.csproj.AssemblyReference.cache
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/DockerSample.GeneratedMSBuildEditorConfig.editorconfig
+06-C#/HelloDocker/DockerSample/obj/Debug/net7.0/DockerSample.GlobalUsings.g.cs
+15-dotnetcore/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.AssemblyInfo.cs
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.AssemblyInfoInputs.cache
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.GeneratedMSBuildEditorConfig.editorconfig
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.GlobalUsings.g.cs
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.RazorAssemblyInfo.cache
+15-dotnetcore/obj/Debug/net6.0/dotnetcoresample.RazorAssemblyInfo.cs
+15-dotnetcore/obj/Debug/net6.0/project.razor.vscode.bin
