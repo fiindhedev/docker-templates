@@ -11,8 +11,14 @@ WORKDIR /src
 # build argument for framework
 ARG FRAMEWORK=echo
 
+ARG DEFAULTFRAMEWORK=micro
+
 # copy go.mod and go.sum
 COPY /$FRAMEWORK/go.mod /$FRAMEWORK/go.sum ./
+
+
+#micro framework
+COPY /$DEFAULTFRAMEWORK/go.mod /$DEFAULTFRAMEWORK/go.sum ./
 
 # download dependencies
 RUN go mod download
@@ -22,6 +28,12 @@ COPY $FRAMEWORK $FRAMEWORK
 
 # build golang app
 RUN CGO_ENABLED=0 GO111MODULE=on go build -v -o /main -installsuffix cgo -ldflags="-w -s" ./$FRAMEWORK/*.go
+
+# copy other files 
+COPY $DEFAULTFRAMEWORK $DEFAULTFRAMEWORK
+
+# build golang app
+RUN CGO_ENABLED=0 GO111MODULE=on go build -v -o /main -installsuffix cgo -ldflags="-w -s" ./$DEFAULTFRAMEWORK/*.go
 
 # second stage
 FROM alpine
@@ -33,7 +45,7 @@ COPY --from=builder main .
 RUN chmod +x /main
 
 # expose port 80
-EXPOSE 80
+EXPOSE 8082
 
 # run app executeable file
 CMD ["./main"]
